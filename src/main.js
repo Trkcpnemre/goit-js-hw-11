@@ -64,7 +64,6 @@ function displayImages(images) {
   lightbox.refresh();
 }
 
-
 form.addEventListener('submit', e => {
   e.preventDefault();
 
