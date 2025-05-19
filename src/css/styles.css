@@ -15,7 +15,7 @@ a {
 }
 
 html {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat;
   font-size: 10px;
 }
 
@@ -39,10 +39,8 @@ html {
   background-color: #4e75ff;
   border: none;
   border-radius: 8px;
-  color: #ffffff;
+  color: #ffff;
   font-size: 1.6rem;
-  margin-left: 8px;
-  cursor: pointer;
 }
 
 .gallery {
@@ -51,7 +49,6 @@ html {
   gap: 24px;
   margin: auto;
   max-width: 1128px;
-  justify-content: center;
 }
 
 .card {
@@ -63,8 +60,6 @@ html {
 img {
   height: 152px;
   width: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 .info {
@@ -91,15 +86,14 @@ img {
 .loader {
   width: 64px;
   height: 64px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   background: #808080;
   border-radius: 4px;
   overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
-
 .loader:before {
   content: '';
   position: absolute;
@@ -112,7 +106,6 @@ img {
   box-shadow: 32px -34px 0 5px #ff3d00;
   animation: slide 2s infinite ease-in-out alternate;
 }
-
 .loader:after {
   content: '';
   position: absolute;
@@ -128,22 +121,25 @@ img {
 }
 
 @keyframes slide {
-  0%, 100% {
+  0%,
+  100% {
     bottom: -35px;
   }
-  25%, 75% {
+  25%,
+  75% {
     bottom: -2px;
   }
-  20%, 80% {
+  20%,
+  80% {
     bottom: 2px;
   }
 }
-
 @keyframes rotate {
   0% {
     transform: rotate(-15deg);
   }
-  25%, 75% {
+  25%,
+  75% {
     transform: rotate(0deg);
   }
   100% {
