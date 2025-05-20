@@ -1,6 +1,7 @@
+// src/js/pixabay-api.js
 import axios from 'axios';
 
-const API_KEY = '50407097-97f89f24cac4a5e9b5e4904eb';
+const API_KEY = import.meta.env.VITE_PIXABAY_API_KEY; // .env'den al
 const URL = 'https://pixabay.com/api/';
 
 export function getImagesByQuery(query) {
@@ -16,7 +17,7 @@ export function getImagesByQuery(query) {
     })
     .then(response => response.data.hits)
     .catch(error => {
-      console.log(error);
+      console.error('API error:', error);
       return [];
     });
 }
